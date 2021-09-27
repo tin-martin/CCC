@@ -14,11 +14,12 @@ public class test{
             ciph = ciph.substring(0,index) + codedin.charAt(i) + ciph.substring(index+1);
         }
         for(int i=0;i<codedout.length();i++){
-            System.out.print(alph.charAt(ciph.indexOf(codedout.charAt(i))));         
-        }
-        
-        
-       
-       
+            try{
+                System.out.print(alph.charAt(ciph.indexOf(codedout.charAt(i))));                  
+            }catch(Exception e){
+                System.out.print(".");
+            }
+            
+        }   
     }
 }
