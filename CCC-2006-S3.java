@@ -1,3 +1,12 @@
+/**
+Solution:
+Iterate through each building:
+Find all possible ordered pairs of two corners of the given building. For each corner pair:
+1. Find intersection between the line between the given corners and the line between Romy's and Jules' windows.
+2. If there is an intersection and the intersection falls between the corners, print the building's number and repeat the process for the next building. If not, continue iteration until the loop ends or the conditions are met. 
+Once all buildings are iterated through, end program.
+**/
+
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.ArrayList;
