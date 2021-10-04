@@ -38,8 +38,7 @@ For each input to be checked:
   where identity is denoted as i
 **/
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Arrays;
+
 public class test{
     public static void main(String[] args){
         Scanner sc  = new Scanner(System.in);
