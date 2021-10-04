@@ -50,14 +50,15 @@ public class test{
             int[][] g = new int[n+1][n+1];
             boolean isGroup = true;
             
-            for (int x=1;x<=n;x++){
-                for(int y=1;y<=n;y++){
+            for (int y=1;y<=n;y++){
+                for(int x=1;x<=n;x++){
                     g[y][x] = sc.nextInt();
+                    if(g[y][x] < 1 || g[y][x] > n) isGroup = false;
                 }
             }
-            
+       
              //associative
-            for(int x=1;x<=n;x++){
+            for(int x=1;x<=n && isGroup;x++){
                 for(int y=1;y<=n;y++){
                     for(int z=1;z<=n;z++){
                         if (g[x][g[y][z]] != g[g[x][y]][z]){
@@ -75,26 +76,32 @@ public class test{
             for(int i=1;i<=n && isGroup && identity == -4;i++){
                 found = true;
                 for(int x=1;x<=n && found;x++){
-                    if(g[i][x] != x){
+                    if(g[i][x] != x || g[x][i] != x){
                         found = false;
                     }
                 }
                 if (found){
                     identity = i;
-                    break;
                 }   
             }
+            
+           // System.out.println(identity);
             isGroup = isGroup && found;
+            
             //inverse
-            found = false;
-            for(int inv = 1;inv<=n && isGroup;inv++){
+            
+            for(int inv=1;inv<=n && isGroup;inv++){
+                found = false;
                 for(int x=1;x<=n && !found;x++){
-                    if (g[x][inv] == identity){
+                    if (g[x][inv] == identity && g[inv][x] == identity){  
                         found = true;
                     }
                 }
+                if (!found){
+                    isGroup = false;
+                }
             }
-            isGroup = isGroup && found;
+            
             if(isGroup) System.out.println("yes");
             else System.out.println("no");
         }    
