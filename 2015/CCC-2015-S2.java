@@ -1,46 +1,6 @@
 
 import java.util.*;
 import java.lang.*;
-/**
-public class ListNode{
-    int data;
-    ListNode next;
-    public ListNode(int data){
-        this.data = data;
-        this.next = null;
-        
-    }
-}
-
-public class LinkedIntList{
-    ListNode front;
-    public LinkedIntList{
-        this.front = null;
-    }
-    public void add(int data){
-        ListNode n = this.front;
-        if(n == null){
-            this.front = new ListNode(data);
-            return;
-        }
-        while(true){
-            if(n.next == null){
-                n.next = new ListNode(data);
-                return;
-            }else{
-                n = n.next;
-            }
-        }
-    }   
-    
-    public void printLinkedIntList(){
-        ListNode n = front;
-        while(n != null){
-            System.out.print(n+" ");
-            n = n.next;
-        }
-    }
-}*/
 
 public class Main {
    
