@@ -19,7 +19,6 @@ public class Main {
         });
         double maxSpeed = Double.MIN_VALUE;
         for(int i=1;i<timeToDisplacement.length;i++){
-            //fucklife
             double tempSpeed = (timeToDisplacement[i][1]-timeToDisplacement[i-1][1])/(timeToDisplacement[i][0]-timeToDisplacement[i-1][0]);
             tempSpeed = Math.abs(tempSpeed);
             if(tempSpeed > maxSpeed){
